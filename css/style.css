@@ -1,4 +1,10 @@
-* {
+:root {
+    --timeline: #cecccc;
+  }
+
+*,
+*::before, 
+*::after  {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -6,7 +12,6 @@
     padding: 0;
     color: rgb(32, 32, 32);
     font-family: 'Lato', sans-serif;
-    
 }
 
 header {
@@ -21,8 +26,11 @@ header {
 }
 
 nav ul li a {
+    font-family: 'Assistant', sans-serif;
     display: block;
-    height: 26px;
+    font-size: 13px;
+    height: 29px;
+    letter-spacing: 1px;
 }
 
 
@@ -33,7 +41,7 @@ nav ul li a {
 
 
 
-sidebar {
+aside {
     position: fixed;
     top: 0;
     right: 0;
@@ -116,7 +124,7 @@ label {
 
 .text-align-right, .text-align-right a {
     text-align: right;
-    font-size: 14;
+    font-size: 14px;
     color: rgb(122, 122, 122);
     font-weight: 300;
 }
@@ -129,6 +137,92 @@ label {
 #selected2 {
     font-weight: 900;
     color: rgb(107, 107, 107);
+}
+
+#part-of-cv {
+    position: relative;
+    border-left: 2px solid var(--timeline);
+    padding-top: 50px;
+    margin-top: 10vh;
+}
+
+.merits-wrapper1 {
+    position: relative;
+    right: 6px;
+}
+
+.merits-wrapper2 {
+    display: inline-block;
+    margin-bottom: 60px;
+    margin-left: 35px;
+}
+
+.merits-wrapper1:last-of-type .merits-wrapper2{
+    margin-bottom: 47px;
+}
+
+#part-of-cv p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(85, 85, 85);
+    font-weight: 200;
+}
+
+h5 {
+    font-family: 'Assistant', sans-serif;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgb(78, 78, 78);
+
+}
+
+h5::after {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(230, 228, 228);
+}
+
+.bullet {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid var(--timeline);
+    transition-duration: 350ms;
+    transition-timing-function: ease-in;
+    transition-property: border, transform;
+}
+
+.merits-wrapper1:hover .bullet {
+    border: 1px solid var(--timeline);
+    transform: scale(2.5);
+
+}
+
+.timeline-arrow {
+    position: absolute;
+    bottom: 0;
+    left: -1.5px;
+    height: 12px;
+    width: 12px;
+    border-right: 2px solid var(--timeline);
+    border-bottom: 2px solid var(--timeline);
+    transform: scale(0.9, 1) rotate(45deg);
+
 }
 
 #to-portfolio-wrapper {
@@ -161,5 +255,6 @@ h6 {
 
 #to-portfolio img {
     width: 100%;
+    color: white;
 
 }

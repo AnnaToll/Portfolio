@@ -2,7 +2,16 @@
     --timeline: #cecccc;
   }
 
-*,
+
+  * {
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: rgb(32, 32, 32);
+  }
+
 *::before, 
 *::after  {
     box-sizing: border-box;
@@ -10,8 +19,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    color: rgb(32, 32, 32);
-    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: ;
 }
 
 header {
@@ -39,6 +52,19 @@ nav ul li a {
     font-size: 13px;
 }
 
+.typo a:hover {
+    color: grey;
+    font-weight: bolder;
+}
+
+.selected {
+    font-weight: 900;
+    color: rgb(66, 66, 66);
+}
+
+.selected:hover {
+    font-weight: 900;
+}
 
 
 aside {
@@ -46,9 +72,9 @@ aside {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 18vw;
+    width: 16.5vw;
     background-color: rgb(255, 255, 255);
-    padding: 3.4vh 3%;
+    padding: 3.4vh 2.2% 3.4vh 2.4%;
 }
 
 input,
@@ -75,10 +101,11 @@ label {
 }
 
 #home {
-    background-image: url("white_wall_hash.png");
-    background-color: rgb(238, 238, 238);
+    background-image: url("white_wall.png");
+/*     background-size: cover; */
+    background-color: rgb(165, 112, 112);
     height: 100vh;
-    width: 82vw;
+    width: 83.5vw;
 }
 
 #portfolio {
@@ -117,7 +144,6 @@ label {
     display: inline-block;
     width: 30%;
     margin-left: 4%;
-    font-size: 14.7px;
     font-weight: 300;
     line-height: 19.5px;
 }
@@ -129,11 +155,6 @@ label {
     font-weight: 300;
 }
 
-.selected {
-    font-weight: 900;
-    color: rgb(66, 66, 66);
-}
-
 #selected2 {
     font-weight: 900;
     color: rgb(107, 107, 107);
@@ -143,7 +164,7 @@ label {
     position: relative;
     border-left: 2px solid var(--timeline);
     padding-top: 50px;
-    margin-top: 10vh;
+    top: 9vh;
 }
 
 .merits-wrapper1 {
@@ -153,8 +174,8 @@ label {
 
 .merits-wrapper2 {
     display: inline-block;
-    margin-bottom: 60px;
-    margin-left: 35px;
+    margin-bottom: 7.8vh;
+    margin-left: 40px;
 }
 
 .merits-wrapper1:last-of-type .merits-wrapper2{
@@ -163,8 +184,8 @@ label {
 
 #part-of-cv p {
     font-family: 'Roboto Mono', monospace;
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 11px;
+    line-height: 15px;
     color: rgb(85, 85, 85);
     font-weight: 200;
 }
@@ -193,24 +214,44 @@ h5::after {
     background-color: rgb(230, 228, 228);
 }
 
+.merits-wrapper1:hover h5 {
+    color: #623AA2;
+}
+
 .bullet {
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: 0.5vh;
     height: 9px;
     width: 9px;
     border-radius: 50%;
     background-color: white;
     border: 3px solid var(--timeline);
-    transition-duration: 350ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-in;
     transition-property: border, transform;
 }
 
 .merits-wrapper1:hover .bullet {
     border: 1px solid var(--timeline);
-    transform: scale(2.5);
+    transform: scale(2.8 );
 
+}
+
+.plus {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 100;    
+    top: -9px;
+    left: -3px;
+    color: white;
+    transform: scale(0);
+    transition-duration: 350ms;
+}
+
+.merits-wrapper1:hover .plus {
+    transform: scale(1);
+    color: rgb(68, 68, 68);
 }
 
 .timeline-arrow {
@@ -225,36 +266,93 @@ h5::after {
 
 }
 
-#to-portfolio-wrapper {
+#download-cv-wrapper {
+    display: none;
     position: absolute;
     width: 100%;
     bottom: 4vh;
-    line-height: 50px;
-
 }
 
-#to-portfolio-wrapper > div {
-    position: absolute;
-    top: 0;    
+#download-cv-wrapper > div { 
+    position: relative;  
+    left: -20px;
+    top: 5px;
     display: inline-block;
+    background: rgb(233, 233, 233);
+    height: 33px;
+    width: 55.5%;
+    text-align: center;
+    padding: 8px;
+    z-index: -1;
 }
 
 h6 {
-    font-weight: 400;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(104, 103, 103);
+
 }
 
-#to-portfolio {
-    width: 47px;
-    height: 47px;
-    background-color: magenta;
+#cv-btn {
+    display: inline-block;
+    text-align: center;
+    width: 51px;
+    height: 51px;
+    background-color: rgb(91, 194, 189);
     border-radius: 50%;
-    border: none;
-    padding: 10px;
-    margin-right: 1vw;
+    border: 5px solid rgb(233, 233, 233);
+    box-shadow: ;
 }
 
-#to-portfolio img {
-    width: 100%;
+.fa-save {
+    position: relative;
+    font-size: 23px;
+    top: 9px;
     color: white;
-
+    font-weight: 300;
 }
+
+#to-portfolio-2 {
+    position: absolute;
+    bottom: 4vh;
+    left: 2.5vw;
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(-30deg, #623AA2, #F97794);
+    background-color: rgb(91, 194, 189);
+    border-radius: 50%;
+    animation-name: bouncing-arrow;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bouncing-arrow {
+    0%   
+    {bottom: 4vh;}
+    50%
+    {bottom: 4.5vh;}
+    100% {bottom: 4vh;}
+  }
+
+
+
+.fa-arrow-down {
+    position: relative;
+    font-size: 23px;
+    top: 19px;
+    color: white;
+    font-weight: 300;
+}
+
+/* #to-portfolio img {
+    display: relative;
+    width: 70%;
+    top: 10px;
+        top: 5vh;
+    left: 3.2vw
+} */

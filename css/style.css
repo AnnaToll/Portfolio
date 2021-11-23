@@ -21,6 +21,12 @@
     padding: 0;
 }
 
+h1 {
+    font-family: 'Assistant', sans-serif;
+    font-size: 56px;
+    margin-bottom: 2vh;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
@@ -41,8 +47,8 @@ header {
 nav ul li a {
     font-family: 'Assistant', sans-serif;
     display: block;
-    font-size: 13px;
-    height: 29px;
+    font-size: 14px;
+    height: 29.5px;
     letter-spacing: 1px;
 }
 
@@ -53,8 +59,8 @@ nav ul li a {
 }
 
 .typo a:hover {
-    color: grey;
-    font-weight: bolder;
+    color: rgb(100, 99, 99);
+    font-weight: 900;
 }
 
 .selected {
@@ -111,39 +117,19 @@ label {
 #portfolio {
     background-color: rgb(155, 225, 228);
     height: 100vh;
-    width: 82vw;
+    width: 83.5vw;
 }
 
 
 .main-wrapper {
     position: relative;
-    top: 22vh; 
-    left: 11vw;   
-    max-width: 750px;
+    top: 31vh; 
+    left: 0.5vw;   
+    max-width: 550px;
     margin: 0 auto;
 }
 
-.img-frame {
-    display: inline-block;
-    background-color: white;
-    width: 50%;
-    height: 60vh;
-    padding: 1.8% 2%;
-    box-shadow: 1px 1px 3px 1px rgb(235, 233, 233);
-    border-style: 1px solid grey;
-}
-
-.img-home {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: hue-rotate(340deg) sepia(50%) grayscale(20%) brightness(120%);
-}
-
 .text-home {
-    display: inline-block;
-    width: 30%;
-    margin-left: 4%;
     font-weight: 300;
     line-height: 19.5px;
 }
@@ -164,7 +150,7 @@ label {
     position: relative;
     border-left: 2px solid var(--timeline);
     padding-top: 50px;
-    top: 9vh;
+    top: 10vh;
 }
 
 .merits-wrapper1 {
@@ -174,7 +160,7 @@ label {
 
 .merits-wrapper2 {
     display: inline-block;
-    margin-bottom: 7.8vh;
+    margin-bottom: 8.5vh;
     margin-left: 40px;
 }
 
@@ -194,11 +180,11 @@ h5 {
     font-family: 'Assistant', sans-serif;
     position: relative;
     display: inline-block;
-    font-size: 12px;
+    font-size: 12.5px;
     margin-bottom: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.2px;
     color: rgb(78, 78, 78);
 
 }
